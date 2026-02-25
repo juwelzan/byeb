@@ -1,6 +1,7 @@
 import 'package:byeb/core/path/paths.dart';
 import 'package:byeb/core/themes/app_colors.dart';
 import 'package:byeb/core/widget/png_logo.dart';
+import 'package:byeb/features/auth/presentation/login_or_create_screen.dart';
 import 'package:byeb/features/splash/logic/cubit/splash_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lottie/lottie.dart';
@@ -15,7 +16,7 @@ class SplashScreen extends StatelessWidget {
       body: BlocListener<SplashCubit, SplashState>(
         listener: (context, state) {
           if (state.splash == Splash.end) {
-            print("object");
+            Navigator.pushReplacementNamed(context, LoginOrCreateScreen.name);
           }
         },
         child: Stack(

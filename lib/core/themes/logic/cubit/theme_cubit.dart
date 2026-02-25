@@ -20,7 +20,7 @@ class ThemeCubit extends Cubit<ThemeState> {
     }
     if (getTheme != null) {
       if (getTheme == "${ThemeMode.light}") {
-        emit(state.copyWith(isTheme: ThemeMode.light));
+        emit(state.copyWith(isTheme: ThemeMode.system));
       }
       if (getTheme == "${ThemeMode.dark}") {
         emit(state.copyWith(isTheme: ThemeMode.dark));

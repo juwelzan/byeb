@@ -8,8 +8,9 @@ class AppColors {
 
   /// Light Color
   static const Color lightBackGround = Color(0XFFffffff);
-  static const Color lightText = Color(0XFF666666);
-  static const Color lightSubText = Color(0XFF7d7d7d);
+  static const Color lightText = Color(0XFF505050);
+  static const Color lightSubText = Color(0XFF9f9f9f);
   static const Color lightPrimary = Color(0XFF07aeaf);
   static const Color lightsecondary = Color(0XFFe7f7f7);
+
 }
