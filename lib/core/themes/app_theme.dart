@@ -31,6 +31,7 @@ class AppTheme {
     ),
     filledButtonTheme: FilledButtonThemeData(
       style: FilledButton.styleFrom(
+        backgroundColor: AppColors.lightPrimary,
         maximumSize: Size(.infinity, 50.h),
         minimumSize: Size(.infinity, 50.h),
         shape: RoundedSuperellipseBorder(

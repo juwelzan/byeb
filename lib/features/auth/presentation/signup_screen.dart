@@ -4,54 +4,47 @@ import 'package:byeb/features/auth/widget/auth_widget.dart';
 import 'package:byeb/features/auth/widget/i_have_an_account.dart';
 import 'package:byeb/features/auth/widget/login_with_card.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
-  static const String name = "/LoginScreen";
+class SignupScreen extends StatefulWidget {
+  const SignupScreen({super.key});
+  static const String name = "/SignupScreen";
+
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignupScreen> createState() => _SignupScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 15.w),
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 15.w),
+        child: Center(
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                AuthWidget(
-                  title: "Log in Your account",
-                  subTitle: "enter your email and password",
-                  titleSize: 30.f,
+                Gap(h: 50.h),
+                AuthWidget(title: "Create Your Account", titleSize: 30.f),
+                Gap(h: 40.h),
+                TextFormField(
+                  style: context.textTheme.bodySmall?.copyWith(fontSize: 15.f),
                 ),
                 Gap(h: 20.h),
                 TextFormField(
                   style: context.textTheme.bodySmall?.copyWith(fontSize: 15.f),
-                  textInputAction: TextInputAction.next,
                 ),
                 Gap(h: 20.h),
                 TextFormField(
                   style: context.textTheme.bodySmall?.copyWith(fontSize: 15.f),
-                  textInputAction: TextInputAction.go,
-                  onFieldSubmitted: (value) {
-                    print(value);
-                  },
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    TextButton(
-                      onPressed: () {},
-                      child: Text("Forget Password"),
-                    ),
-                  ],
+                Gap(h: 20.h),
+                TextFormField(
+                  style: context.textTheme.bodySmall?.copyWith(fontSize: 15.f),
                 ),
+                Gap(h: 30.h),
                 FilledButton(onPressed: () {}, child: Text("Log in")),
-                Gap(h: 20.h),
-                Row(
+                Gap(h: 30.h),
+                     Row(
                   mainAxisAlignment: .spaceBetween,
                   children: [
                     Expanded(
@@ -73,14 +66,15 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ],
                 ),
-                Gap(h: 20.h),
+                Gap(h: 30.h),
                 LoginWithCard(
                   svgIcon: Asset.googleIconSVG,
-                  title: "Log in with Google",
+                  title: "Sign up with Google",
                   loding: false,
                 ),
                 Gap(h: 30.h),
-                IDontHaveAnAccount(),
+                IHaveAnAccount(),
+                Gap(h: 50.h),
               ],
             ),
           ),

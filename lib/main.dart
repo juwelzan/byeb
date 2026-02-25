@@ -1,7 +1,6 @@
-import 'package:byeb/core/themes/app_theme.dart';
 import 'package:byeb/core/themes/logic/cubit/theme_cubit.dart';
+import 'package:byeb/features/home/presentation/main_screen.dart';
 import 'package:byeb/features/splash/logic/cubit/splash_cubit.dart';
-import 'package:byeb/features/splash/presentation/splash_screen.dart';
 import 'package:byeb/routes/routers.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -29,7 +28,8 @@ class MyApp extends StatelessWidget {
     return BlocBuilder<ThemeCubit, ThemeState>(
       builder: (context, state) {
         return MaterialApp(
-          initialRoute: SplashScreen.name,
+          debugShowCheckedModeBanner: false,
+          initialRoute: MainScreen.name,
           onGenerateRoute: Routers.route,
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
