@@ -29,7 +29,7 @@ class BottomNavbar extends StatelessWidget {
                   width: 30.w,
                   color: state.pageIndex == 0
                       ? context.theme.primaryColor
-                      : Colors.black45,
+                      : context.textTheme.bodyLarge!.color,
                 ),
               ),
               IconButton(
@@ -41,7 +41,7 @@ class BottomNavbar extends StatelessWidget {
                   width: 30.w,
                   color: state.pageIndex == 1
                       ? context.theme.primaryColor
-                      : Colors.black45,
+                      : context.textTheme.bodyLarge!.color,
                 ),
               ),
               IconButton(
@@ -53,7 +53,7 @@ class BottomNavbar extends StatelessWidget {
                   height: 40.h,
                   color: state.pageIndex == 2
                       ? context.theme.primaryColor
-                      : Colors.black45,
+                      : context.textTheme.bodyLarge!.color,
                 ),
               ),
               IconButton(
@@ -65,7 +65,7 @@ class BottomNavbar extends StatelessWidget {
                   height: 34.h,
                   color: state.pageIndex == 3
                       ? context.theme.primaryColor
-                      : Colors.black45,
+                      : context.textTheme.bodyLarge!.color,
                 ),
               ),
             ],

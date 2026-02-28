@@ -15,8 +15,15 @@ class AllCategories extends StatelessWidget {
                 child: Container(
                   padding: EdgeInsets.all(10.r),
                   margin: EdgeInsets.symmetric(horizontal: 10),
-                  decoration: BoxDecoration(color: Colors.amber),
-                  child: Image.asset(Asset.navbWish,width: 45.w,),
+                  decoration: BoxDecoration(
+                    color: context.theme.secondaryHeaderColor,
+                    borderRadius: BorderRadius.circular(10.r)
+                  ),
+                  child: Image.asset(
+                    Asset.navbWish,
+                    width: 45.w,
+                    color: context.theme.primaryColor,
+                  ),
                 ),
               ),
               Text("data"),

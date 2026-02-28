@@ -13,7 +13,7 @@ class ThemeController with ChangeNotifier {
     }
     if (getTheme != null) {
       if (getTheme == "${ThemeMode.light}") {
-        themeMode = ThemeMode.light;
+        themeMode = ThemeMode.system;
       }
       if (getTheme == "${ThemeMode.dark}") {
         themeMode = ThemeMode.dark;

@@ -20,12 +20,20 @@ class AdsBanner extends StatelessWidget {
             itemBuilder: (context, index) {
               return Padding(
                 padding: EdgeInsets.only(left: 5.w, right: 5.w),
-                child: Container(color: Colors.amber),
+                child: Container(
+
+                  decoration: BoxDecoration(
+                    color: context.theme.primaryColor,
+                    borderRadius: BorderRadius.circular(15.r)
+                  ),
+
+
+                  ),
               );
             },
           ),
         ),
-        Gap(h: 5.h,),
+        Gap(h: 5.h),
         SizedBox(
           height: 15.h,
           child: Consumer<BannerController>(
@@ -43,7 +51,16 @@ class AdsBanner extends StatelessWidget {
                     height: 11.h,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: isActiv ? Colors.amber : Colors.black,
+                      border: Border.all(
+                        width: 2,
+                        color: isActiv
+                            ? context.theme.primaryColor
+                            : context.textTheme.bodySmall!.color!,
+                      ),
+
+                      color: isActiv
+                          ? context.theme.primaryColor
+                          : Colors.transparent,
                     ),
                   );
                 }),
