@@ -2,7 +2,7 @@ import 'package:byeb/core/path/paths.dart';
 import 'package:byeb/features/auth/presentation/login_or_create_screen.dart';
 import 'package:byeb/features/auth/presentation/login_screen.dart';
 import 'package:byeb/features/auth/presentation/signup_screen.dart';
-import 'package:byeb/features/home/presentation/main_screen.dart';
+import 'package:byeb/features/main/main_screen/presentation/main_screen.dart';
 import 'package:byeb/features/splash/presentation/splash_screen.dart';
 
 class Routers {

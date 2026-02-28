@@ -20,6 +20,7 @@ class AppTheme {
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
+      
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10.r),
         borderSide: BorderSide(width: 2, color: AppColors.darkPrimary),

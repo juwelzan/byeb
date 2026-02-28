@@ -39,6 +39,8 @@ dependencies:
   shared_preferences: ^2.5.4
   flutter_svg: ^2.2.3
   lottie: ^3.3.2
+  get: ^4.7.3
+  provider: ^6.1.5+1
 
 
 
@@ -69,6 +71,8 @@ flutter:
   assets:
     - assets/
     - assets/lottie/
+    - assets/icon/
+    - assets/logo/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

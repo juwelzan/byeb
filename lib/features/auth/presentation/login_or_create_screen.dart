@@ -3,7 +3,6 @@ import 'package:byeb/core/path/paths.dart';
 import 'package:byeb/features/auth/presentation/login_screen.dart';
 import 'package:byeb/features/auth/presentation/signup_screen.dart';
 import 'package:byeb/features/auth/widget/auth_widget.dart';
-import 'package:byeb/features/auth/widget/i_have_an_account.dart';
 import 'package:byeb/features/auth/widget/login_with_card.dart';
 
 class LoginOrCreateScreen extends StatefulWidget {
@@ -47,7 +46,7 @@ class _LoginOrCreateScreenState extends State<LoginOrCreateScreen> {
                   title: "Continue with Google",
                   svgIcon: Asset.googleIconSVG,
                 ),
-                
+
                 Gap(h: 100.h),
               ],
             ),
