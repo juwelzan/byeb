@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1053195460166",
+    "project_id": "bayb-23b63",
+    "storage_bucket": "bayb-23b63.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1053195460166:android:c6df517bcc58849981f447",
+        "android_client_info": {
+          "package_name": "com.example.byeb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfu-4ZKmzc1WLXPELsTyeXFD6g1FRYjxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

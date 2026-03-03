@@ -7,7 +7,7 @@ import 'package:byeb/features/auth/widget/login_with_card.dart';
 
 class LoginOrCreateScreen extends StatefulWidget {
   const LoginOrCreateScreen({super.key});
-  static const String name = "LoginOrCreateScreen";
+  static const String name = "/LoginOrCreateScreen";
 
   @override
   State<LoginOrCreateScreen> createState() => _LoginOrCreateScreenState();

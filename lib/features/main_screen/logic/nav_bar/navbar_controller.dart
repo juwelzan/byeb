@@ -1,5 +1,5 @@
 import 'package:byeb/core/path/paths.dart';
-import 'package:byeb/features/main/home_screen/presentation/home_scree.dart';
+import 'package:byeb/features/home_screen/presentation/home_scree.dart';
 
 class NavbarController with ChangeNotifier {
   final PageController pageController = PageController();

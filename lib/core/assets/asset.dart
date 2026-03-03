@@ -11,10 +11,13 @@ class Asset {
       "$_baseUrl/google-icon-logo-svgrepo-com.svg";
 
   static const String navbHome = "$_baseUrl/icon/home.png";
-  static const String navbWish = "$_baseUrl/icon/gift-box.png";
+  static const String navbWish = "assets/icon/giftbox.png";
   static const String navbCategory = "$_baseUrl/icon/category.png";
-  static const String navbCart = "$_baseUrl/icon/trolley.png";
+  static const String navbCart = "assets/icon/cart.png";
   static const String appbarPhone = "$_baseUrl/icon/phone-call.png";
   static const String appbarUser = "$_baseUrl/icon/user.png";
   static const String appbarBell = "$_baseUrl/icon/bell.png";
+  static const String hardFeelPNG = "$_baseUrl/icon/heart_feel.png";
+  static const String hardPNG = "$_baseUrl/icon/heart.png";
+  static const String starPNG = "$_baseUrl/icon/star.png";
 }

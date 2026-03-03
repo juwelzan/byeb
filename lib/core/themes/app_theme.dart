@@ -8,6 +8,8 @@ class AppTheme {
     scaffoldBackgroundColor: AppColors.lightBackGround,
     primaryColor: AppColors.lightPrimary,
     secondaryHeaderColor: AppColors.lightsecondary,
+    primaryColorDark: AppColors.darkBackGround,
+    primaryColorLight: AppColors.lightBackGround,
     textTheme: TextTheme(
       bodyLarge: TextStyle(
         color: AppColors.lightText,
@@ -21,7 +23,6 @@ class AppTheme {
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
-
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10.r),
         borderSide: BorderSide(width: 2, color: AppColors.darkPrimary),
@@ -49,7 +50,9 @@ class AppTheme {
     scaffoldBackgroundColor: AppColors.darkBackGround,
     brightness: Brightness.dark,
     primaryColor: AppColors.darkPrimary,
+    primaryColorDark: AppColors.darkSubText,
     secondaryHeaderColor: AppColors.darksecondary,
+    primaryColorLight: AppColors.darkBackGround,
     textTheme: TextTheme(
       bodyLarge: TextStyle(
         color: AppColors.darkText,

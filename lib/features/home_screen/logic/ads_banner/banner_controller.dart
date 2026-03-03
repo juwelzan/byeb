@@ -13,23 +13,24 @@ class BannerController with ChangeNotifier {
   void autoScrollBanner() {
     timer?.cancel();
 
-    timer = Timer.periodic(Duration(seconds: 3), (timer) {
+    timer = Timer.periodic(Duration(seconds: 5), (timer) {
       bannerIndex++;
       if (!pageController.hasClients) return;
 
       pageController.animateToPage(
         bannerIndex,
-        duration: Duration(milliseconds: 300),
+        duration: Duration(milliseconds: 1000),
         curve: Curves.ease,
       );
       index = (bannerIndex % 4);
 
-      print("$bannerIndex name");
       notifyListeners();
     });
   }
 
   void update(int inde) {
+    timer?.cancel();
+    autoScrollBanner();
     bannerIndex = inde;
 
     index = (inde % 4);

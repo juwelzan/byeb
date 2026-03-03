@@ -2,10 +2,12 @@ import 'package:byeb/core/path/paths.dart';
 import 'package:byeb/features/auth/presentation/login_or_create_screen.dart';
 import 'package:byeb/features/auth/presentation/login_screen.dart';
 import 'package:byeb/features/auth/presentation/signup_screen.dart';
-import 'package:byeb/features/main/main_screen/presentation/main_screen.dart';
+import 'package:byeb/features/main_screen/presentation/main_screen.dart';
 import 'package:byeb/features/splash/presentation/splash_screen.dart';
 
 class Routers {
+  static final GlobalKey<NavigatorState> navigatorKey =
+      GlobalKey<NavigatorState>();
   static Route<dynamic> route(RouteSettings routers) {
     Route route = fadeTransition(SizedBox());
 
@@ -25,6 +27,17 @@ class Routers {
         route = fadeTransition(MainScreen());
     }
     return route;
+  }
+
+  static void to(String routeName) {
+    navigatorKey.currentState!.pushNamed(routeName);
+  }
+
+  static void remove(String routeName) {
+    navigatorKey.currentState!.pushNamedAndRemoveUntil(
+      routeName,
+      (route) => false,
+    );
   }
 }
 
