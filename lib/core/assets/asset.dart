@@ -20,4 +20,5 @@ class Asset {
   static const String hardFeelPNG = "$_baseUrl/icon/heart_feel.png";
   static const String hardPNG = "$_baseUrl/icon/heart.png";
   static const String starPNG = "$_baseUrl/icon/star.png";
+  static const String backPNG = "$_baseUrl/icon/back.png";
 }

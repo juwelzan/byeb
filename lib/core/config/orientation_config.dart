@@ -18,6 +18,6 @@ class OrientationConfig extends InheritedWidget {
   }
 }
 
-extension Ori on BuildContext {
-  Orientation get orientation => OrientationConfig.of(this).orientation;
-}
+// extension Ori on BuildContext {
+//   Orientation get orientation => OrientationConfig.of(this).orientation;
+// }

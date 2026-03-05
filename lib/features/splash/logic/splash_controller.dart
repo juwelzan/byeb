@@ -6,6 +6,6 @@ class SplashController extends ChangeNotifier {
   Future<void> splashStart(BuildContext context) async {
     await Future.delayed(Duration(seconds: 4));
 
-    Routers.remove(MainScreen.name);
+    goRouter.pushReplacement(MainScreen.name);
   }
 }

@@ -1,4 +1,3 @@
-import 'package:byeb/core/config/orientation_config.dart';
 import 'package:byeb/core/path/paths.dart';
 import 'package:byeb/features/main_screen/logic/nav_bar/navbar_controller.dart';
 import 'package:provider/provider.dart';
@@ -8,123 +7,68 @@ class BottomNavbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isPortrait = Orientation.portrait == context.orientation;
     return Consumer<NavbarController>(
       builder: (context, state, child) {
         return Container(
-          height: isPortrait ? 65.h : 116.w,
-          padding: EdgeInsets.all(isPortrait ? 10.f : 4.f),
+          height: 65.h,
+          padding: EdgeInsets.all(10.f),
           decoration: BoxDecoration(
             color: context.theme.primaryColorDark,
-            borderRadius: BorderRadius.circular(isPortrait ? 18.r : 6.w),
+            borderRadius: BorderRadius.circular(18.r),
           ),
-          child: isPortrait ? Row(
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              GestureDetector(
-                onTap: () {
-                  context.read<NavbarController>().nextScreen(0);
-                },
-                child: Image.asset(
-                  Asset.navbHome,
-                  height: isPortrait ? 35.h : 18.w,
-                  color: state.pageIndex == 0
-                      ? context.theme.primaryColor
-                      : context.theme.primaryColorLight,
-                ),
+              navBarIcon(
+                context,
+                img: Asset.navbHome,
+                isActive: state.pageIndex == 0,
+                screenIndex: 0,
               ),
-              GestureDetector(
-                onTap: () {
-                  context.read<NavbarController>().nextScreen(1);
-                },
-                child: Image.asset(
-                  Asset.navbCategory,
-                  height: isPortrait ? 35.h : 18.w,
-                  color: state.pageIndex == 1
-                      ? context.theme.primaryColor
-                      : context.theme.primaryColorLight,
-                ),
+
+              navBarIcon(
+                context,
+                img: Asset.navbCategory,
+                isActive: state.pageIndex == 1,
+                screenIndex: 1,
               ),
-              GestureDetector(
-                onTap: () {
-                  context.read<NavbarController>().nextScreen(2);
-                },
-                child: Image.asset(
-                  Asset.navbCart,
-                  height: isPortrait ? 35.h : 18.w,
-                  color: state.pageIndex == 2
-                      ? context.theme.primaryColor
-                      : context.theme.primaryColorLight,
-                ),
+
+              navBarIcon(
+                context,
+                img: Asset.navbCart,
+                isActive: state.pageIndex == 2,
+                screenIndex: 2,
               ),
-              GestureDetector(
-                onTap: () {
-                  context.read<NavbarController>().nextScreen(3);
-                },
-                child: Image.asset(
-                  Asset.navbWish,
-                  height: isPortrait ? 35.h : 18.w,
-                  color: state.pageIndex == 3
-                      ? context.theme.primaryColor
-                      : context.theme.primaryColorLight,
-                ),
+
+              navBarIcon(
+                context,
+                img: Asset.navbWish,
+                isActive: state.pageIndex == 3,
+                screenIndex: 3,
               ),
             ],
-          ) :  Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        context.read<NavbarController>().nextScreen(0);
-                      },
-                      child: Image.asset(
-                        Asset.navbHome,
-                        height: isPortrait ? 35.h : 18.w,
-                        color: state.pageIndex == 0
-                            ? context.theme.primaryColor
-                            : context.theme.primaryColorLight,
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        context.read<NavbarController>().nextScreen(1);
-                      },
-                      child: Image.asset(
-                        Asset.navbCategory,
-                        height: isPortrait ? 35.h : 18.w,
-                        color: state.pageIndex == 1
-                            ? context.theme.primaryColor
-                            : context.theme.primaryColorLight,
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        context.read<NavbarController>().nextScreen(2);
-                      },
-                      child: Image.asset(
-                        Asset.navbCart,
-                        height: isPortrait ? 35.h : 18.w,
-                        color: state.pageIndex == 2
-                            ? context.theme.primaryColor
-                            : context.theme.primaryColorLight,
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        context.read<NavbarController>().nextScreen(3);
-                      },
-                      child: Image.asset(
-                        Asset.navbWish,
-                        height: isPortrait ? 35.h : 18.w,
-                        color: state.pageIndex == 3
-                            ? context.theme.primaryColor
-                            : context.theme.primaryColorLight,
-                      ),
-                    ),
-                  ],
-                ),
+          ),
         );
       },
     );
   }
+}
+
+Widget navBarIcon(
+  BuildContext context, {
+  required bool isActive,
+
+  required String img,
+  required int screenIndex,
+}) {
+  return GestureDetector(
+    onTap: () => context.read<NavbarController>().nextScreen(screenIndex),
+    child: Image.asset(
+      img,
+      height: 35.h,
+      color: isActive
+          ? context.theme.primaryColor
+          : context.theme.primaryColorLight,
+    ),
+  );
 }

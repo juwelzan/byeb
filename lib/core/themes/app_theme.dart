@@ -21,6 +21,21 @@ class AppTheme {
         fontWeight: FontWeight.w400,
         fontSize: 18.f,
       ),
+      titleSmall: TextStyle(
+        color: AppColors.lightPrimary,
+        fontWeight: .w500,
+        fontSize: 10.f,
+      ),
+      headlineLarge: TextStyle(
+        fontSize: 20.f,
+        fontWeight: .w600,
+        color: AppColors.lightText,
+      ),
+      headlineMedium: TextStyle(
+        fontSize: 15.f,
+        color: AppColors.darkPrimary,
+        fontWeight: .w600,
+      ),
     ),
     inputDecorationTheme: InputDecorationTheme(
       enabledBorder: OutlineInputBorder(
@@ -50,7 +65,7 @@ class AppTheme {
     scaffoldBackgroundColor: AppColors.darkBackGround,
     brightness: Brightness.dark,
     primaryColor: AppColors.darkPrimary,
-    primaryColorDark: AppColors.darkSubText,
+    primaryColorDark: AppColors.darksecondary,
     secondaryHeaderColor: AppColors.darksecondary,
     primaryColorLight: AppColors.darkBackGround,
     textTheme: TextTheme(
@@ -63,6 +78,21 @@ class AppTheme {
         color: AppColors.darkSubText,
         fontWeight: FontWeight.w400,
         fontSize: 18.f,
+      ),
+      titleSmall: TextStyle(
+        color: AppColors.lightPrimary,
+        fontWeight: .w500,
+        fontSize: 10.f,
+      ),
+      headlineLarge: TextStyle(
+        fontSize: 20.f,
+        fontWeight: .w600,
+        color: AppColors.darkText,
+      ),
+      headlineMedium: TextStyle(
+        fontSize: 15.f,
+        color: AppColors.darkPrimary,
+        fontWeight: .w600,
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
@@ -84,6 +114,15 @@ class AppTheme {
           borderRadius: BorderRadius.circular(10.r),
         ),
         textStyle: TextStyle(fontSize: 20.f, fontWeight: .w800),
+      ),
+    ),
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(
+        textStyle: TextStyle(
+          fontSize: 15.f,
+          color: AppColors.darkPrimary,
+          fontWeight: .w600,
+        ),
       ),
     ),
   );

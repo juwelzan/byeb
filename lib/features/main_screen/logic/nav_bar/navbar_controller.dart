@@ -1,4 +1,6 @@
 import 'package:byeb/core/path/paths.dart';
+import 'package:byeb/features/cart_screen/presentation/cart_screen.dart';
+import 'package:byeb/features/categorie_screen/presentation/categorie_screen.dart';
 import 'package:byeb/features/home_screen/presentation/home_scree.dart';
 
 class NavbarController with ChangeNotifier {
@@ -12,8 +14,8 @@ class NavbarController with ChangeNotifier {
 
   final List<Widget> page = <Widget>[
     HomeScreen(),
-    Placeholder(color: Colors.amber),
-    Placeholder(),
+    CategorieScreen(),
+    CartScreen(),
     Placeholder(color: Colors.deepOrange),
   ];
   void copyWith({int? index}) {
