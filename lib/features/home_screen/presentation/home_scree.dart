@@ -23,7 +23,7 @@ class _HomeScreeState extends State<HomeScreen>
   bool get wantKeepAlive => true;
   @override
   void initState() {
-    WidgetsBinding.instance.addPostFrameCallback((_) {
+    Future.microtask(() {
       context.read<BannerController>().autoScrollBanner();
     });
 
@@ -35,8 +35,6 @@ class _HomeScreeState extends State<HomeScreen>
     super.build(context);
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyActions: false,
-        automaticallyImplyLeading: false,
         title: SvgPicture.asset(Asset.navLogoSVG, width: 140.w),
         actions: [
           IconButton(
@@ -74,24 +72,27 @@ class _HomeScreeState extends State<HomeScreen>
 
           SliverGap(h: 10.h),
           SliverToBoxAdapter(
-            child: SizedBox(height: 180.h, child: AdsBanner()),
+            child: SizedBox(
+              height: 180.h,
+              child: RepaintBoundary(child: AdsBanner()),
+            ),
           ),
           SliverGap(h: 10.h),
-          TitleName(),
+          SliverToBoxAdapter(child: RepaintBoundary(child: TitleName())),
           SliverGap(h: 10.h),
 
           AllCategories(),
 
           SliverGap(h: 10.h),
-          TitleName(),
-          ProductSection(),
+          SliverToBoxAdapter(child: RepaintBoundary(child: TitleName())),
+          SliverToBoxAdapter(child: RepaintBoundary(child: ProductSection())),
           SliverGap(h: 10.h),
-          TitleName(),
-          ProductSection(),
+          SliverToBoxAdapter(child: RepaintBoundary(child: TitleName())),
+          SliverToBoxAdapter(child: RepaintBoundary(child: ProductSection())),
           SliverGap(h: 10.h),
-          TitleName(),
-          ProductSection(),
-          SliverGap(h: 200),
+          SliverToBoxAdapter(child: RepaintBoundary(child: TitleName())),
+          SliverToBoxAdapter(child: RepaintBoundary(child: ProductSection())),
+          const SliverGap(h: 200),
         ],
       ),
     );

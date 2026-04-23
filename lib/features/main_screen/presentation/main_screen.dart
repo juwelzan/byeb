@@ -15,12 +15,12 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          Positioned.fill(
-            child: Consumer<NavbarController>(
-              builder: (context, state, child) {
-                return PageView.builder(
+      body: Consumer<NavbarController>(
+        builder: (context, state, child) {
+          return Stack(
+            children: [
+              Positioned.fill(
+                child: PageView.builder(
                   physics: NeverScrollableScrollPhysics(),
                   itemCount: state.page.length,
                   onPageChanged: (value) => state.copyWith(index: value),
@@ -28,18 +28,19 @@ class _MainScreenState extends State<MainScreen> {
                   itemBuilder: (context, index) {
                     return state.page[index];
                   },
-                );
-              },
-            ),
-          ),
+                ),
+              ),
 
-          Positioned(
-            left: 10.w,
-            right: 10.w,
-            bottom: 25.h,
-            child: BottomNavbar(),
-          ),
-        ],
+              if (state.pageIndex != 2)
+                Positioned(
+                  left: 10.w,
+                  right: 10.w,
+                  bottom: 25.h,
+                  child: BottomNavbar(),
+                ),
+            ],
+          );
+        },
       ),
     );
   }

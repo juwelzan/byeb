@@ -9,13 +9,15 @@ class AllCategories extends StatelessWidget {
     return SliverToBoxAdapter(
       child: SizedBox(
         height: 100.h,
-        child: ListView.builder(
-          itemCount: 20,
-          physics: BouncingScrollPhysics(),
-          scrollDirection: .horizontal,
-          itemBuilder: (context, index) {
-            return CategorieWidget();
-          },
+        child: RepaintBoundary(
+          child: ListView.builder(
+            itemCount: 20,
+            physics: BouncingScrollPhysics(),
+            scrollDirection: .horizontal,
+            itemBuilder: (context, index) {
+              return CategorieWidget();
+            },
+          ),
         ),
       ),
     );

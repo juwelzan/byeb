@@ -6,10 +6,10 @@ class ProductSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(
-      child: SizedBox(
-        height: 180.h,
+    return SizedBox(
+      height: 180.h,
 
+      child: RepaintBoundary(
         child: ListView.builder(
           itemCount: 5,
           scrollDirection: Axis.horizontal,
@@ -18,7 +18,7 @@ class ProductSection extends StatelessWidget {
           itemBuilder: (context, index) {
             return Padding(
               padding: EdgeInsets.only(top: 10.h, bottom: 10.h, left: 20.w),
-              child: ProdactWidget(),
+              child: RepaintBoundary(child: ProdactWidget()),
             );
           },
         ),

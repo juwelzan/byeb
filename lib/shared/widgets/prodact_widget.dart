@@ -32,61 +32,63 @@ class ProdactWidget extends StatelessWidget {
             ),
             Gap(h: 10.h),
             Expanded(
-              child: Container(
-                padding: EdgeInsets.only(left: 5.w, right: 5.w),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(12.r),
-                    bottomRight: Radius.circular(12.r),
+              child: RepaintBoundary(
+                child: Container(
+                  padding: EdgeInsets.only(left: 5.w, right: 5.w),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(12.r),
+                      bottomRight: Radius.circular(12.r),
+                    ),
                   ),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      "sdfklghsdljgv sdjfhjdsf sdjfghjdsf sdhfgdsfg",
-                      style: context.textTheme.titleLarge?.copyWith(
-                        fontSize: 12.f,
-                        fontWeight: .w500,
-                        color: AppColors.lightText,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        "sdfklghsdljgv sdjfhjdsf sdjfghjdsf sdhfgdsfg",
+                        style: context.textTheme.titleLarge?.copyWith(
+                          fontSize: 12.f,
+                          fontWeight: .w500,
+                          color: AppColors.lightText,
+                        ),
                       ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "\$100000",
-                          style: context.textTheme.titleMedium?.copyWith(
-                            fontSize: 11.f,
-                            color: AppColors.lightText,
-                          ),
-                        ),
-                        Row(
-                          children: [
-                            Image.asset(Asset.starPNG, width: 13.w),
-                            Gap(w: 5.w),
-                            Text(
-                              "4.5",
-                              style: context.textTheme.titleMedium?.copyWith(
-                                fontSize: 11.f,
-                                color: AppColors.lightText,
-                              ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "\$100000",
+                            style: context.textTheme.titleMedium?.copyWith(
+                              fontSize: 11.f,
+                              color: AppColors.lightText,
                             ),
-                          ],
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            print("object");
-                          },
-                          child: Image.asset(Asset.hardPNG, width: 15.w),
-                        ),
-                      ],
-                    ),
-                  ],
+                          ),
+                          Row(
+                            children: [
+                              Image.asset(Asset.starPNG, width: 13.w),
+                              Gap(w: 5.w),
+                              Text(
+                                "4.5",
+                                style: context.textTheme.titleMedium?.copyWith(
+                                  fontSize: 11.f,
+                                  color: AppColors.lightText,
+                                ),
+                              ),
+                            ],
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              print("object");
+                            },
+                            child: Image.asset(Asset.hardPNG, width: 15.w),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

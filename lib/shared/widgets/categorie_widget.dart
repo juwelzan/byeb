@@ -26,7 +26,7 @@ class CategorieWidget extends StatelessWidget {
               ),
             ),
           ),
-          Text("Electronic", style: context.textTheme.titleSmall),
+          Text("Electronic 112", style: context.textTheme.titleSmall),
         ],
       ),
     );
